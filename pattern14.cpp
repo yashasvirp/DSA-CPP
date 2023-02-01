@@ -23,7 +23,7 @@ int main(){
     
     for(int j = 0; j < n; j++){
       c = 'A'+ (i + j);
-      //c = 'A' + i +j - 2;
+      //c = 'A' + i +j - 2; //use this when loop starts with i and j as 1 to n
       cout<<c;
     }
   }
