@@ -22,7 +22,8 @@ int main(){
     for(j = 0; j < n-i; j++) // for spaces
       cout<<" ";
 
-    for(int k = j-1; k < n; k++)
+    //for(int k = j-1; k < n; k++)
+    for(int k = 0; k <= i; k++) //Another way of doing it
       cout<<"*";
   }
 
