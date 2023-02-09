@@ -12,7 +12,9 @@ int main(){
   cout<<"Enter size: ";
   cin>>n;
 
-  int arr[n];
+  //  int arr[n]; bad practice to do so
+  
+  int arr[100];
   
   cout<<"Enter elements: ";
   
