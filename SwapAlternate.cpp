@@ -14,12 +14,13 @@ int main(){
 
   cout<<"Enter elements: ";
 
-  int p = (n%2==0)?n:n-1;
+  //int p = (n%2==0)?n:n-1; not required, run loop only till n-1
   
   for(int i = 0; i < n; i++)
     cin>>arr[i];
   
-  for(int i = 0; i < p; i+=2){
+  for(int i = 0; i < n-1; i+=2){
+    
     int temp;
     temp = arr[i];
     arr[i] = arr[i+1];
