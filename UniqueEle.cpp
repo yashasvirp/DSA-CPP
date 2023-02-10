@@ -1,4 +1,4 @@
-// Ana array of size N is given where N = 2M+1. (basically N is odd)
+// An array of size N is given where N = 2M+1. (basically N is odd)
 //M numbers are present twice, and only 1 number is present once.
 // Find the unique element.
 
