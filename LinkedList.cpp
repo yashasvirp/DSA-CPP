@@ -180,10 +180,10 @@ public:
     if(pos == 1)
       return deleteBegin();
 
-    if(pos == size)
-      return deleteEnd();
+    //if(pos == size)
+    //  return deleteEnd();
 
-    while(t->next->next != NULL && --pos > 1)
+    while(t->next != NULL && --pos > 1)
 	t = t->next;
 
     p = t->next;
@@ -198,7 +198,7 @@ public:
 
   int searchByVal(int val){
     Node *t = head;
-
+    
     int pos = 0;
     
     while(t != NULL){
@@ -230,7 +230,7 @@ public:
     if(pos == 1)
       return t->data;
 
-    while(t->next->next != NULL && pos-- > 1)
+    while(t->next != NULL && --pos >= 1)
 	t = t->next;
 
     int val = t->data;
@@ -243,7 +243,7 @@ public:
   int deleteByVal(int val){
 
     int pos = searchByVal(val);
-
+    
     if(pos == -1){
       cout<<"\nElement does not exist!";
       return -1;
