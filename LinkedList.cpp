@@ -55,17 +55,19 @@ public:
     temp->data = val;
     temp->next = NULL;
 
-    if(head == NULL)
+    if(head == NULL){
       head = temp;
-    else{
-
-      t = head;
-
-      while(t->next != NULL)
-	t = t->next;
-
-      t->next = temp;
+      size++;
+      return;
     }
+    
+    
+    t = head;
+    
+    while(t->next != NULL)
+      t = t->next;
+
+    t->next = temp;
 
     size++;
   }
@@ -148,6 +150,14 @@ public:
       return -1;
     }
 
+    if(head->next == NULL){
+      val = head->data;
+      head = NULL;
+      free(t); //freeing head
+      size--;
+      return val;
+    }
+    
     while(t->next->next != NULL)
       t = t->next;
     
@@ -179,9 +189,6 @@ public:
 
     if(pos == 1)
       return deleteBegin();
-
-    //if(pos == size)
-    //  return deleteEnd();
 
     while(t->next != NULL && --pos > 1)
 	t = t->next;
